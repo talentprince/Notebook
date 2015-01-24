@@ -4,5 +4,11 @@
     <string name="app_name">Notebook</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title">title</string>
+    <string name="time">2015-1-1</string>
+    <string name="title_activity_noting">NotingActivity</string>
+    <string name="save">SAVE</string>
+    <string name="modify">MODIFY</string>
+    <string name="noting">Notinnnnnng</string>
 
 </resources>
