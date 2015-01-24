@@ -1,0 +1,13 @@
+{
+	"syntaxVersion": "2",
+	"projectPackageId": "org.weyoung.notebook",
+	"authority": "org.weyoung.notebook.provider",
+	"providerJavaPackage": "org.weyoung.notebook.data",
+	"providerClassName": "NotebookProvider",
+	"sqliteOpenHelperClassName": "NoteBookSQLHelper",
+	"sqliteOpenHelperCallbacksClassName": "NoteBookSQLHelperCallbacks",
+	"databaseFileName": "notebook.db",
+	"databaseVersion": 1,
+	"enableForeignKeys": true,
+	"useAnnotations": true,
+}

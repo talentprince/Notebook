@@ -1,0 +1,31 @@
+{
+    "fields": [
+        {
+            "name": "title",
+            "type": "String",
+            "nullable": "false",
+            "index": true,
+        },
+        {
+            "name": "create_time",
+            "type": "String",
+            "nullable": "false",
+        },
+        {
+            "name": "update_time",
+            "type": "String",
+            "nullable": "false",
+        },
+        {
+            "name": "content",
+            "type": "String",
+            "nullable": "true",
+        },
+    ],
+    "constraints": [
+        {
+            "name": "unique_title",
+            "definition": "UNIQUE (title) ON CONFLICT REPLACE"
+        },
+    ]
+}
