@@ -12,6 +12,9 @@ Thanks for
 * Provider Generator
 [BoD](https://github.com/BoD/android-contentprovider-generator)
 
+* FloatingActionButton
+[FaizMalkani](https://github.com/FaizMalkani/FloatingActionButton)
+
 * SyncAdapter
 [google doc](http://developer.android.com/training/sync-adapters/creating-sync-adapter.html)
 
