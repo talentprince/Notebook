@@ -19,10 +19,10 @@ Thanks for
 [google doc](http://developer.android.com/training/sync-adapters/creating-authenticator.html)
 
 
-![image](https://github.com/talentprince/RxJavaAndroidDemo/raw/master/login.png)
+![image](https://github.com/talentprince/Notebook/raw/master/login.png)
 
-![image](https://github.com/talentprince/RxJavaAndroidDemo/raw/master/nootbook.png)
+![image](https://github.com/talentprince/Notebook/raw/master/nootbook.png)
 
-![image](https://github.com/talentprince/RxJavaAndroidDemo/raw/master/noting.png)
+![image](https://github.com/talentprince/Notebook/raw/master/noting.png)
 
-![image](https://github.com/talentprince/RxJavaAndroidDemo/raw/master/sync.png)
+![image](https://github.com/talentprince/Notebook/raw/master/sync.png)
