@@ -6,16 +6,16 @@ More information see [Blog](http://talentprince.github.io)
 
 Thanks for
 
-*Inject
+#Inject
 [Butterknife](https://github.com/JakeWharton/butterknife)
 
-*Provider Generator
+#Provider Generator
 [BoD](https://github.com/BoD/android-contentprovider-generator)
 
-*SyncAdapter
+#SyncAdapter
 [google doc](http://developer.android.com/training/sync-adapters/creating-sync-adapter.html)
 
-*Account Authenicator
+#Account Authenicator
 [google doc](http://developer.android.com/training/sync-adapters/creating-authenticator.html)
 
 
