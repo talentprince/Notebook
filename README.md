@@ -21,7 +21,7 @@ Thanks for
 
 ![image](https://github.com/talentprince/Notebook/raw/master/login.png)
 
-![image](https://github.com/talentprince/Notebook/raw/master/nootbook.png)
+![image](https://github.com/talentprince/Notebook/raw/master/notebook.png)
 
 ![image](https://github.com/talentprince/Notebook/raw/master/noting.png)
 
