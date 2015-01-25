@@ -9,6 +9,7 @@ import android.widget.TextView;
 import org.weyoung.notebook.NotingActivity;
 import org.weyoung.notebook.R;
 import org.weyoung.notebook.data.Note;
+import org.weyoung.notebook.utils.TimeUtil;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -36,7 +37,7 @@ public class NoteViewHolder extends RecyclerView.ViewHolder {
     public void populate(final Note note) {
         title.setText(note.getTitle());
         createTime.setText(note.getCreateTime());
-        modifyTime.setText(note.getUpdateTime());
+        modifyTime.setText(TimeUtil.getDiff(note.getCreateTime(), note.getUpdateTime()));
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override

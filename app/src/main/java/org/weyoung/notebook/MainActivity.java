@@ -13,9 +13,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.weyoung.notebook.data.Note;
 import org.weyoung.notebook.data.notedata.NotedataColumns;
 import org.weyoung.notebook.data.notedata.NotedataCursor;
-import org.weyoung.notebook.data.Note;
+import org.weyoung.notebook.utils.SyncUtils;
 import org.weyoung.notebook.ui.NoteRecyclerAdapter;
 
 import java.util.ArrayList;
@@ -53,21 +54,23 @@ public class MainActivity extends ActionBarActivity implements LoaderManager.Loa
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        SyncUtils.CheckAccount(this);
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.sync) {
+            SyncUtils.TriggerRefresh();
             return true;
         }
 
@@ -92,7 +95,7 @@ public class MainActivity extends ActionBarActivity implements LoaderManager.Loa
         List<Note> notes = new ArrayList<>();
         NotedataCursor cursor = new NotedataCursor(data);
         while(cursor.moveToNext()) {
-            notes.add(new Note(cursor.getTitle(), cursor.getCreateTime(), cursor.getUpdateTime(), cursor.getCreateTime()));
+            notes.add(new Note(cursor.getTitle(), cursor.getCreateTime(), cursor.getUpdateTime(), cursor.getContent()));
         }
         noteRecyclerAdapter.setNotes(notes);
         noteRecyclerAdapter.notifyDataSetChanged();

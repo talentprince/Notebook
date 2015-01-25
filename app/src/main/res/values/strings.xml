@@ -10,5 +10,17 @@
     <string name="save">SAVE</string>
     <string name="modify">MODIFY</string>
     <string name="noting">Notinnnnnng</string>
+    <string name="sync">Sync</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_authenticator">AuthenticatorActivity</string>
+    <string name="needtitle">Need a title</string>
+    <string name="writesomething">Write something ~~~</string>
+    <string name="account_name">Account Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="notenough">Login data not enough</string>
+    <string name="oneaccount">Already has an account~</string>
+    <string name="title_activity_fail">FailActivity</string>
+    <string name="titleneeded">Title needed!</string>
 
 </resources>

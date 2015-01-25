@@ -2,6 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.weyoung.notebook" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Sync -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <!-- Authenticator -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <!-- getAuthTokenByFeatures -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- getAccountsByType -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -17,18 +31,55 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NotingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_noting"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
 
         <activity
-            android:windowSoftInputMode="adjustResize"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:name=".NotingActivity"
-            android:label="@string/title_activity_noting" >
+            android:name=".AuthenticatorActivity"
+            android:label="@string/title_activity_authenticator" >
+        </activity>
+        <activity
+            android:name=".FailActivity"
+            android:label="@string/title_activity_fail" >
         </activity>
 
         <provider
             android:name=".data.NotebookProvider"
             android:authorities="org.weyoung.notebook.provider"
-            android:exported="false" />
+            android:syncable="true"
+            android:exported="false"/>
+
+        <service
+            android:name=".sync.SyncService"
+            android:exported="true"
+            android:process=":sync" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+
+        <service
+            android:name=".sync.AccountService"
+            android:exported="true"
+            android:process=":auth" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+
     </application>
 
 </manifest>

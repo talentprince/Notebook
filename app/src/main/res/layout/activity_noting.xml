@@ -8,12 +8,14 @@
 
     <EditText
         android:id="@+id/title"
+        android:hint="@string/needtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/note"
         android:gravity="top"
+        android:hint="@string/writesomething"
         android:layout_below="@id/title"
         android:layout_above="@+id/save"
         android:layout_width="match_parent"
